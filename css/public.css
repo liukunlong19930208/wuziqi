@@ -1,0 +1,14 @@
+body,p,h1,h2,h3,h4,h5,h6,ol,ul,li,dl,dt,dd,form,input{
+    margin:0;
+    padding:0;
+    font-family: 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+    font-size:14px;
+    list-style:none;/*清除列表标签小圆点*/
+}
+a{
+    color:#333;
+    text-decoration: none;
+}
+img{
+    border: none;
+}

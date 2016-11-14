@@ -1,0 +1,530 @@
+body{
+	width:100%;
+	height:100%;
+	background:url(../img/bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow:hidden;
+}
+.box{
+	width:602px;
+	height:602px;
+	position:relative;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+	
+}
+canvas{
+	 position:absolute;
+	 top: 0;
+	 bottom:0;
+	 left:0;
+	 right:0;
+	 margin:auto;
+	 border:1px solid #000;
+	 background:url(../img/beijing.jpg);
+	 
+}
+
+#audio{
+	display:none;
+}
+#clock1{
+	width:200px;
+	padding:20px;
+	right:-312px;
+	top:293px;
+	position:absolute;
+}
+#clock1:after{
+	content:'';
+	position:absolute;
+	width:400px;
+	height:20px;
+	border-radius:100%;
+	left:50%;
+	margin-left:-200px;
+	bottom:2px;
+	z-index:-1;
+}
+#clock1 .display{
+	text-align:center;
+	padding: 40px 20px 20px;
+	border-radius:6px;
+	position:relative;
+	height: 54px;
+}
+#clock1.light{
+	background-color:#f3f3f3;
+	color:#272e38;
+}
+
+#clock1.light:after{
+	box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+#clock1.light .display{
+	background-color:#dddddd;
+	box-shadow:0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #fafafa;
+}
+#clock{
+	width:200px;
+	padding:20px;
+	right:-312px;
+	top:30px;
+	position:absolute;
+}
+#clock:after{
+	content:'';
+	position:absolute;
+	width:400px;
+	height:20px;
+	border-radius:100%;
+	left:50%;
+	margin-left:-200px;
+	bottom:2px;
+	z-index:-1;
+}
+
+
+#clock .display{
+	text-align:center;
+	padding: 40px 20px 20px;
+	border-radius:6px;
+	position:relative;
+	height: 54px;
+}
+#clock.light{
+	background-color:#f3f3f3;
+	color:#272e38;
+}
+
+#clock.light:after{
+	box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+#clock.light .display{
+	background-color:#dddddd;
+	box-shadow:0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #fafafa;
+}
+.djs,.djs1{
+     position: absolute;
+     right:30px;
+     top:23px;
+     font-size:30px;
+}
+.time1,.time2{
+  width:150px;
+  height:70px;
+  text-align: center;
+  line-height: 70px;
+  cursor: pointer;
+  color: #fff;
+  font-weight:bold;
+  border-radius: 30px;
+  font-size:30px;
+}
+.djs,.djs1{
+        width: 150px;
+        height:70px;
+        background: black;
+        text-align: center;
+        line-height: 70px;
+        cursor: pointer;
+        color: #fff;
+        border-radius: 30px;
+}
+.t1{
+    color: red;
+   
+  }
+.time1{
+     position: absolute;
+     right:-275px;
+     top:195px;
+}
+.time2{
+    position: absolute;
+    right:-278px;
+    top:472px;
+}
+.logo{
+	width:200px;
+	height:200px;
+	position:absolute;
+	top: 20px;
+	right:100px;
+}
+.logo img{
+	width:200px;
+	height:200px;
+}
+.l1{
+	position:absolute;
+	left:100px;
+	bottom:50px;
+}
+.r1{
+	position:absolute;
+	right:100px;
+	bottom:50px;
+}
+.startbox{
+	width:1366px;
+	height:100%;
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	z-index:100;
+	background: #222222;
+    transform: translateX(0);
+    transition: transform 1s ease;
+}
+.startbox.up{
+  transform: translateY(-1000px);
+}
+
+.startbox .start{
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  margin-left: -250px;
+  width: 500px;
+  height:293px;
+  background: url(../img/start.png) no-repeat;
+  background-size: cover;
+  transform: translateY(0);
+  transition: transform 1s ease;
+}
+
+.startbox .start1{
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  top: 500px;
+  left: 50%;
+  margin-left: -120px;
+  background: url(../img/kaishi.png) no-repeat;
+  width:230px;
+  height:100px;
+  z-index:10;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: transform 1s ease;
+}
+@keyframes yi{
+	from{
+		margin-left:100px;
+	}
+	to{
+		margin-left:450px;
+	}
+}
+.startbox .wenzi{
+	  width:220px;
+	  height:200px;
+	  margin:20px auto;
+	  margin-left:450px;
+	  color:#fff;
+	  font-size:50px;
+	  animation:yi 0.5s ease-in-out 0s forwards;
+}
+.startbox .setting{
+	width:200px;
+	height:200px;
+	position:absolute;
+	bottom:-85px;
+	right:100px;
+	animation:set 2s forwards;
+	
+}
+@keyframes set{
+	0%{
+		transform:rotateY(0deg);
+	}
+	40%{
+		transform:rotateY(0deg);
+	}
+	100%{
+		transform:rotateY(360deg);
+	}
+}
+.bat{
+	width:150px;
+	height:150px;
+	position:absolute;
+	bottom:220px;
+	left:-342px;
+	cursor:pointer;
+	transition:all 0.2s ease-in-out;
+	
+	
+}
+
+.bat img{
+	width:150px;
+	height:150px;
+	
+}
+.bat:hover{
+	transform:scale(1.2);
+}
+
+.bat p{
+	 color:#fff;
+	 display:block;
+	 font-size:25px;
+	 position:absolute;
+	 top:50px;
+	 left:28px;
+    
+	 
+}
+
+.bat1{
+	width:150px;
+	height:150px;
+	position:absolute;
+	bottom:400px;
+	left:-208px;
+	cursor:pointer;
+	transition:all 0.2s ease-in-out;
+}
+.bat1 img{
+	width:150px;
+	height:150px;
+}
+.bat1:hover{
+	transform:scale(1.2);
+}
+.bat1 p{
+	 color:#fff;
+	 display:block;
+	 font-size:25px;
+	 position:absolute;
+	 top:50px;
+	 left:30px;
+}
+.bat2{
+	position:absolute;
+	top:420px;
+	left:-236px;
+}
+ .set,.set1{
+      width:400px;
+      height:460px;
+      background:rgba(245,235,213,0.8);
+      border:5px solid #a95843;
+      box-sizing:border-box;
+      border-radius: 10px;
+      position: absolute;
+      left:50%;
+      top:50%;
+      margin-left:-240px;
+      margin-top:-250px;
+      z-index:11;
+      display: none;
+    }
+    .set1{
+      z-index: 200;
+      overflow: hidden;
+      display: none;
+    }
+    .set img{
+      cursor: pointer;
+    }
+    .set1 #yxsm{
+      margin-left:50px;
+    }
+    .kaishi{
+      width:420px;
+      height:125px;
+      position: absolute;
+      left:50%;
+      margin-left:-210px;
+      top:50%;
+      margin-top:-60px;
+      background:url(../img/kaishi.png);
+      background-size:cover;
+      visibility: hidden;
+    }
+    .kaishi img{
+     margin-top:20px;
+
+    }
+    #active{
+      animation:active 0.8s forwards;
+      transition:0.5s all linear;
+    }
+    @keyframes active{
+      from{
+        visibility: hidden;
+      }
+      to{
+        visibility: visible;
+      }
+    }
+    .head{
+      width:100%;
+      height:100px;
+      border-bottom:3px solid #736959;
+    }
+    .head img:first-child{
+      height:60px;
+      float: left;
+      margin-left:100px;
+      margin-top:20px;
+    }
+    .head img:last-child{
+      width:50px;
+      float: right;
+      margin-top:20px;
+    }
+    .set .body{
+      width:300px;
+      height:200px;
+      background:#e6dac0;
+      border-radius: 10px;
+      margin:20px auto;
+      box-shadow: 2px 2px 3px #ded1b7;
+    }
+    .set1 .body{
+      width:400px;
+      height:400px;
+      background:url(../img/gz1.png) no-repeat center;
+      background-size:contain;
+    }
+    .line1{
+      width:100%;
+      height:100px;
+    }
+    .bgyy{
+      width:150px;
+      float: left;
+      margin-top:20px;
+    }
+    .col{
+      width:120px;
+      height:36px;
+      background:url(../img/an1.png);
+      background-size:cover;
+      float: right;
+      margin-top:20px;
+      cursor: pointer;
+    }
+     #huantu{
+      background:url(../img/an.png);
+       background-size:cover;
+    }
+    .bottom{
+      width:100%;
+      height:100px;
+      background:#f5ebd5;
+    }
+    .sm{
+      width:150px;
+      float: left;
+      margin-top:30px;
+      margin-left:40px;
+    }
+    .jt{
+      width:50px;
+      float: right;
+      margin-top:30px;
+      margin-right:40px;
+    }
+	.pan{
+		transition: all .8s ease;
+	    transform: translateY(-1000px);
+		width:400px;
+		height:400px;
+		position:absolute;
+		top:100px;
+		left:98px;
+		
+	}
+	.pan p{
+		display:block;
+		position:absolute;
+		top:100px;
+		left:150px;
+		color:#fff;
+		font-size:25px;
+	}
+	.pan .again{
+		display:block;
+		position:absolute;
+		top:206px;
+		left:103px;
+		color:#fff;
+		font-size:20px;
+	}
+	.pan .qipu{
+		display:block;
+		position:absolute;
+		top:207px;
+		left:215px;
+		font-size:20px;
+	}
+    
+	.active1{
+		transform:translateX(0px);
+	}
+	.box1{
+		 transition:all 0.8s ease;
+		 transform:scale(0,0);
+		 width: 500px;
+		 height:500px;
+		 position:absolute;
+		 top: 0;
+		 bottom:0;
+		 left:0;
+		 right:0;
+		 margin:auto;
+		 background:white;
+		 z-index:20;
+		 box-shadow:0 0 0 1000px rgba(0,0,0,0.5);
+	}
+	.active{
+		transform:scale(1,1);
+	}
+	.box1 img{
+		width:500px;
+		height:500px;
+	    z-index:5;
+	}
+	.box1 a{
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		z-index:6;
+	}
+    .box1 .close{
+    	width:20px;
+    	height:20px;
+    	background:#000;
+    	position:absolute;
+    	top:-15px;
+    	right:-15px;
+    	color:#fff;
+    	text-align:center;
+    	cursor:pointer;
+}
+.qipu1{
+	width:204px;
+	height:46px;
+	position:absolute;
+	bottom:285px;
+	left:-198px;
+	transition:0.2s ease-in-out;
+}
+

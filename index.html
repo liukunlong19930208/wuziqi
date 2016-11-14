@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>五子棋</title>
+	<link rel="stylesheet" href="css/index.css" />
+	<link rel="stylesheet" href="css/public.css" />
+	<script src="js/jquery.js"></script>
+	<script src="js/index.js"></script>
+	
+</head>
+<body>
+  <div class="box">
+	<canvas id="canvas" width="600" height="600"></canvas>
+	<audio src="1.wav" id="audio" controls></audio>
+	<audio src="music/乔小龙 - 雨的印记 (伴奏).mp3" id="audio1" autoplay></audio>
+	<div id="clock" class="light">
+		<div class="display">
+		     <div class="digits">
+		        <div class="djs">00:<span>30</span></div>
+			 </div>
+	    </div>
+	</div>
+	<div id="clock1" class="light ">
+		<div class="display">
+		     <div class="digits">
+		        <div class="djs1">00:<span>30</span></div>
+			 </div>
+	    </div>
+	</div>
+	<div class="time1">黑方</div>
+	<div class="time2">白方</div>
+	<div class="bat">
+		<p>人机对战</p>
+		<img src="img/yuan.png" alt="" />
+	</div>
+	<div class="bat1 bat3">
+		<p>人人对战</p>
+		<img src="img/yuan.png" alt="" />
+	</div>
+	<div class="bat1 bat2">
+		<p>重新开始</p>
+		<img src="img/yuan.png" alt="" />
+	</div>
+	<div class="startbox">
+		<div class="wenzi">
+			<img src="img/ziti.png" alt="" />
+		</div>
+		<div class="start"></div>
+        <div class="start1"></div>
+        <div class="setting">
+        	<img src="img/sett.png" alt="" class="she"/>
+        	
+        </div>
+     <div class="set">
+      <div class="head">
+        <img src="img/set1.png" alt="">
+        <img src="img/cha.png" alt="" class="cha">
+      </div>
+      <div class="body">
+        <div class="line1">
+          <img src="img/bgyy.png" alt="" class="bgyy">
+          <div class="col col1"></div>
+        </div>
+        <div class="line1">
+          <img src="img/yx.png" alt="" class="bgyy">
+          <div class="col col2"></div>
+        </div>
+      </div>
+      <div class="bottom">
+        <img src="img/sm.png" alt="" class="sm">
+        <img src="img/jt.png" alt="" class="jt">
+      </div>
+    </div>
+     <div class="set1">
+      <div class="head">
+        <img src="img/yxsm.png" alt="" id="yxsm">
+        <img src="img/cha.png" alt="" class="cha">
+      </div>
+       <div class="body"></div>
+	</div>
+　</div>
+     <div class="pan">
+		<p class="win"></p>
+		<p class="again">再来一局</p>
+		<p class="qipu">退出</p>
+		<img src="img/panduan.png" alt="" class="pann1">
+	</div>
+	<div class="box1">
+		<div class="close">X</div>
+	</div>
+	<div class="qipu1">
+		<img src="img/qi.png" alt="" />
+	</div>
+</div>
+</body>
+</html>
