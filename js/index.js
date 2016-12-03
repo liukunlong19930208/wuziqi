@@ -189,7 +189,7 @@ $(function(){
 		 if(flag){
 		 	luozi(x,y,"black")
 		 	time1();
-            $(".djs span").html("30");
+            $(".djs span").html("10");
             if(panduan(x,y,"black")>=5){
             	$(canvas).off("click");
             	$('.pan').find('.win').html('黑棋赢').end().addClass('active1');
@@ -197,7 +197,7 @@ $(function(){
             }
           }else{
 		 	 luozi(x,y,"white");
-		 	 $(".djs1 span").html("30");
+		 	 $(".djs1 span").html("10");
 		 	 if(panduan(x,y,"white")>=5){
 		 	 	$(canvas).off("click");
             	$('.pan').find('.win').html('白棋赢').end().addClass('active1');
@@ -278,9 +278,9 @@ $(function(){
 	  var t;
 	  var t1;
 	  function time() {
-        var s=30;
+        var s=10;
         t=setInterval(function (){
-            tx=s<30?"0"+s:s;
+            tx=s<10?"0"+s:s;
             s--;
             if(s<0){
               clearInterval(t);
@@ -289,9 +289,9 @@ $(function(){
         },1000)
     }
         function time1() {
-        var s=30;
+        var s=10;
         t1=setInterval(function () {
-            tx=s<30?"0"+s:s;
+            tx=s<10?"0"+s:s;
             s--;
             if(s<0){
                clearInterval(t1);
